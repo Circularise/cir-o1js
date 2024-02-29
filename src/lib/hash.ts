@@ -8,6 +8,8 @@ import { Poseidon as PoseidonBigint } from '../bindings/crypto/poseidon.js';
 import { assert } from './errors.js';
 import { rangeCheckN } from './gadgets/range-check.js';
 import { TupleN } from './util/types.js';
+import { NoblePoseidonMina } from '@noble/curves/mina';
+import { bigintArrayToFieldArray, fieldArrayToBigIntArray } from './noble.js';
 
 // external API
 export { Poseidon, TokenSymbol };
@@ -48,23 +50,25 @@ class Sponge {
 
 const Poseidon = {
   hash(input: Field[]) {
-    if (isConstant(input)) {
-      return Field(PoseidonBigint.hash(toBigints(input)));
-    }
-    return Poseidon.update(Poseidon.initialState(), input)[0];
+    // if (isConstant(input)) {
+    //   return Field(PoseidonBigint.hash(toBigints(input)));
+    // }
+    // return Poseidon.update(Poseidon.initialState(), input)[0];
+    return Field(NoblePoseidonMina.hash(fieldArrayToBigIntArray(input)));
   },
 
   update(state: [Field, Field, Field], input: Field[]) {
-    if (isConstant(state) && isConstant(input)) {
-      let newState = PoseidonBigint.update(toBigints(state), toBigints(input));
-      return TupleN.fromArray(3, newState.map(Field));
-    }
+    // if (isConstant(state) && isConstant(input)) {
+    //   let newState = PoseidonBigint.update(toBigints(state), toBigints(input));
+    //   return TupleN.fromArray(3, newState.map(Field));
+    // }
 
-    let newState = Snarky.poseidon.update(
-      MlFieldArray.to(state),
-      MlFieldArray.to(input)
-    );
-    return MlFieldArray.from(newState) as [Field, Field, Field];
+    // let newState = Snarky.poseidon.update(
+    //   MlFieldArray.to(state),
+    //   MlFieldArray.to(input)
+    // );
+    // return MlFieldArray.from(newState) as [Field, Field, Field];
+    return bigintArrayToFieldArray(NoblePoseidonMina.update(fieldArrayToBigIntArray(state), fieldArrayToBigIntArray(input))) as [Field, Field, Field];
   },
 
   hashWithPrefix(prefix: string, input: Field[]) {

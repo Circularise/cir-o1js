@@ -10,6 +10,7 @@ export {
 export { createForeignCurve, ForeignCurve } from './lib/foreign-curve.js';
 export { createEcdsa, EcdsaSignature } from './lib/foreign-ecdsa.js';
 export { Poseidon, TokenSymbol, ProvableHashable } from './lib/hash.js';
+export { fieldArrayToBigIntArray, bigintArrayToFieldArray } from './lib/noble.js';
 export { Keccak } from './lib/keccak.js';
 export { Hash } from './lib/hashes-combined.js';
 
@@ -152,4 +153,4 @@ let isReady = Promise.resolve();
 /**
  * @deprecated `shutdown()` is no longer needed, and is a no-op. Remove it from your code.
  */
-function shutdown() {}
+function shutdown() { }
