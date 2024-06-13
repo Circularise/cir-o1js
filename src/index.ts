@@ -124,6 +124,8 @@ export { setNumberOfWorkers } from './lib/proof-system/workers.js';
 import { memoizeWitness } from './lib/provable.js';
 export { Experimental };
 
+export { commit, verifyCommitment } from './lib/pedersen.js';
+
 const Experimental_ = {
   memoizeWitness,
 };
