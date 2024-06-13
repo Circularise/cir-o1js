@@ -1,4 +1,4 @@
-import { Field, PrivateKey, SmartContract, State, method, state } from 'o1js';
+import { Field, PrivateKey, SmartContract, State, method, state } from '@circularise/cir-o1js';
 
 export const adminPrivateKey = PrivateKey.random();
 export const adminPublicKey = adminPrivateKey.toPublicKey();

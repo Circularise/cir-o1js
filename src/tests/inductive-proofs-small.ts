@@ -1,4 +1,4 @@
-import { SelfProof, Field, ZkProgram, Proof } from 'o1js';
+import { SelfProof, Field, ZkProgram, Proof } from '@circularise/cir-o1js';
 import { tic, toc } from '../examples/utils/tic-toc.node.js';
 
 let MaxProofsVerifiedOne = ZkProgram({

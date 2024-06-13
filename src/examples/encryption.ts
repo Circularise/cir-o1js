@@ -5,7 +5,7 @@ import {
   isReady,
   Circuit,
   Provable,
-} from 'o1js';
+} from '@circularise/cir-o1js';
 
 await isReady;
 

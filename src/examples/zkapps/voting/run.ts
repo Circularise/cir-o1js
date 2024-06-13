@@ -1,4 +1,4 @@
-import { Bool, PrivateKey, UInt32, UInt64 } from 'o1js';
+import { Bool, PrivateKey, UInt32, UInt64 } from '@circularise/cir-o1js';
 import { VotingApp, VotingAppParams } from './factory.js';
 import {
   ElectionPreconditions,

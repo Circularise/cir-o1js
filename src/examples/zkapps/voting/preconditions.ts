@@ -1,4 +1,4 @@
-import { Bool, UInt32, UInt64 } from 'o1js';
+import { Bool, UInt32, UInt64 } from '@circularise/cir-o1js';
 
 export class ElectionPreconditions {
   startElection: UInt32;

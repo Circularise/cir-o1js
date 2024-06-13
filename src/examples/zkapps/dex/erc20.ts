@@ -14,7 +14,7 @@ import {
   AccountUpdateForest,
   Struct,
   TransactionVersion,
-} from 'o1js';
+} from '@circularise/cir-o1js';
 
 export { Erc20Like, TrivialCoin };
 

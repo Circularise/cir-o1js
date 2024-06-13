@@ -16,11 +16,11 @@ import {
   state,
   TokenContract as BaseTokenContract,
   AccountUpdateForest,
-} from 'o1js';
+} from '@circularise/cir-o1js';
 
 export { TokenContract, addresses, createDex, keys, randomAccounts, tokenIds };
 
-class UInt64x2 extends Struct([UInt64, UInt64]) {}
+class UInt64x2 extends Struct([UInt64, UInt64]) { }
 
 function createDex({
   lockedLiquiditySlots,
@@ -339,38 +339,38 @@ function createDex({
       try {
         balances[user].MINA =
           Mina.getBalance(addresses[user]).toBigInt() / 1_000_000_000n;
-      } catch {}
+      } catch { }
       for (let token of ['X', 'Y', 'lqXY'] as const) {
         try {
           balances[user][token] = Mina.getBalance(
             addresses[user],
             tokenIds[token]
           ).toBigInt();
-        } catch {}
+        } catch { }
       }
     }
     try {
       balances.dex.X = Mina.getBalance(addresses.dex, tokenIds.X).toBigInt();
-    } catch {}
+    } catch { }
     try {
       balances.dex.Y = Mina.getBalance(addresses.dex, tokenIds.Y).toBigInt();
-    } catch {}
+    } catch { }
     try {
       balances.tokenContract.X = Mina.getBalance(
         addresses.tokenX,
         tokenIds.X
       ).toBigInt();
-    } catch {}
+    } catch { }
     try {
       balances.tokenContract.Y = Mina.getBalance(
         addresses.tokenY,
         tokenIds.Y
       ).toBigInt();
-    } catch {}
+    } catch { }
     try {
       let dex = new Dex(addresses.dex);
       balances.total.lqXY = dex.totalSupply.get().toBigInt();
-    } catch {}
+    } catch { }
     return balances;
   }
 
@@ -460,8 +460,8 @@ function randomAccounts<K extends string>(
 ): { keys: Record<K, PrivateKey>; addresses: Record<K, PublicKey> } {
   let base58Keys = createNewAccounts
     ? Array(6)
-        .fill('')
-        .map(() => PrivateKey.random().toBase58())
+      .fill('')
+      .map(() => PrivateKey.random().toBase58())
     : savedKeys;
   let keys = Object.fromEntries(
     names.map((name, idx) => [name, PrivateKey.fromBase58(base58Keys[idx])])

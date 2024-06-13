@@ -1,8 +1,8 @@
-import { Bytes, Gadgets, ZkProgram } from 'o1js';
+import { Bytes, Gadgets, ZkProgram } from '@circularise/cir-o1js';
 
 export { SHA256Program, Bytes12 };
 
-class Bytes12 extends Bytes(12) {}
+class Bytes12 extends Bytes(12) { }
 
 let SHA256Program = ZkProgram({
   name: 'sha256',

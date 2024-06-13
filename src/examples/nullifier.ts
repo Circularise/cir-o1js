@@ -11,7 +11,7 @@ import {
   MerkleMapWitness,
   Mina,
   AccountUpdate,
-} from 'o1js';
+} from '@circularise/cir-o1js';
 
 class PayoutOnlyOnce extends SmartContract {
   @state(Field) nullifierRoot = State<Field>();

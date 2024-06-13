@@ -1,4 +1,4 @@
-import { Hash, Bytes, Provable } from 'o1js';
+import { Hash, Bytes, Provable } from '@circularise/cir-o1js';
 
 let Bytes32 = Bytes(32);
 

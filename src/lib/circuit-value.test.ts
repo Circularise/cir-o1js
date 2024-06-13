@@ -6,7 +6,7 @@ import {
   Field,
   PrivateKey,
   PublicKey,
-} from 'o1js';
+} from '@circularise/cir-o1js';
 
 describe('circuit', () => {
   it('Provable.if out of snark', () => {
@@ -149,7 +149,7 @@ describe('circuit', () => {
   it('can serialize Struct with array', async () => {
     class MyStruct extends Struct({
       values: Provable.Array(Field, 2),
-    }) {}
+    }) { }
 
     const original = new MyStruct({ values: [Field(0), Field(1)] });
 

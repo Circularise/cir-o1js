@@ -8,7 +8,7 @@ import {
   TokenId,
   TokenContract,
   AccountUpdateForest,
-} from 'o1js';
+} from '@circularise/cir-o1js';
 
 class Token extends TokenContract {
   @method

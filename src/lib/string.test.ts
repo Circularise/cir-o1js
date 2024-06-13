@@ -6,7 +6,7 @@ import {
   Field,
   shutdown,
   isReady,
-} from 'o1js';
+} from '@circularise/cir-o1js';
 
 describe('Circuit String', () => {
   beforeEach(() => isReady);

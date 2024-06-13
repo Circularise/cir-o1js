@@ -7,9 +7,9 @@ import {
   UInt64,
   Poseidon,
   MerkleWitness,
-} from 'o1js';
+} from '@circularise/cir-o1js';
 
-export class MyMerkleWitness extends MerkleWitness(3) {}
+export class MyMerkleWitness extends MerkleWitness(3) { }
 let w = {
   isLeft: false,
   sibling: Field(0),

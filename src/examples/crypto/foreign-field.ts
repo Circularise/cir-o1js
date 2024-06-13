@@ -15,11 +15,11 @@ import {
   Provable,
   state,
   State,
-} from 'o1js';
+} from '@circularise/cir-o1js';
 
 // Let's create a small finite field: F_17
 
-class SmallField extends createForeignField(17n) {}
+class SmallField extends createForeignField(17n) { }
 
 let x = SmallField.from(16);
 x.assertEquals(-1); // 16 = -1 (mod 17)
@@ -85,7 +85,7 @@ let uCanonical = u.assertEquals(-3);
 assert(uCanonical instanceof SmallField.Canonical);
 
 // to use the different variants of foreign fields as smart contract inputs, you might want to create a class for them:
-class AlmostSmallField extends SmallField.AlmostReduced {}
+class AlmostSmallField extends SmallField.AlmostReduced { }
 
 class MyContract extends SmartContract {
   @state(AlmostSmallField.provable) x = State<AlmostSmallField>();

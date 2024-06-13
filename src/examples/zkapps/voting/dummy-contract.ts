@@ -7,7 +7,7 @@ import {
   DeployArgs,
   Permissions,
   TransactionVersion,
-} from 'o1js';
+} from '@circularise/cir-o1js';
 
 export class DummyContract extends SmartContract {
   @state(Field) sum = State<Field>();

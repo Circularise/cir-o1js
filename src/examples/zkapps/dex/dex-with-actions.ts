@@ -22,14 +22,14 @@ import {
   UInt64,
   method,
   state,
-} from 'o1js';
+} from '@circularise/cir-o1js';
 
 import { randomAccounts } from './dex.js';
 import { TrivialCoin } from './erc20.js';
 
 export { Dex, DexTokenHolder, addresses, getTokenBalances, keys, tokenIds };
 
-class RedeemAction extends Struct({ address: PublicKey, dl: UInt64 }) {}
+class RedeemAction extends Struct({ address: PublicKey, dl: UInt64 }) { }
 
 class Dex extends TokenContract {
   // addresses of token contracts are constants
@@ -343,26 +343,26 @@ function getTokenBalances() {
     try {
       balances[user].MINA =
         Mina.getBalance(addresses[user]).toBigInt() / 1_000_000_000n;
-    } catch {}
+    } catch { }
     for (let token of ['X', 'Y', 'lqXY'] as const) {
       try {
         balances[user][token] = Mina.getBalance(
           addresses[user],
           tokenIds[token]
         ).toBigInt();
-      } catch {}
+      } catch { }
     }
   }
   try {
     balances.dex.X = Mina.getBalance(addresses.dex, tokenIds.X).toBigInt();
-  } catch {}
+  } catch { }
   try {
     balances.dex.Y = Mina.getBalance(addresses.dex, tokenIds.Y).toBigInt();
-  } catch {}
+  } catch { }
   try {
     let dex = new Dex(addresses.dex);
     balances.dex.lqXYSupply = dex.totalSupply.get().toBigInt();
-  } catch {}
+  } catch { }
   return balances;
 }
 

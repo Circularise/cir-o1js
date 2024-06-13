@@ -14,10 +14,10 @@ import {
   Reducer,
   fetchAccount,
   TokenId,
-} from 'o1js';
+} from '@circularise/cir-o1js';
 import assert from 'node:assert';
 
-class Event extends Struct({ pub: PublicKey, value: Field }) {}
+class Event extends Struct({ pub: PublicKey, value: Field }) { }
 
 class SimpleZkapp extends SmartContract {
   @state(Field) x = State<Field>();

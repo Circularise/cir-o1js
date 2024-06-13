@@ -1,4 +1,4 @@
-import { isReady, shutdown, Field, MerkleMap } from 'o1js';
+import { isReady, shutdown, Field, MerkleMap } from '@circularise/cir-o1js';
 
 describe('Merkle Map', () => {
   beforeAll(async () => {
@@ -38,8 +38,8 @@ describe('Merkle Map', () => {
 
     expect(
       emptyLeafWitnessRoot.equals(emptyMap.getRoot()).toBoolean() &&
-        witnessKey.equals(key).toBoolean() &&
-        witnessRoot.equals(map.getRoot()).toBoolean()
+      witnessKey.equals(key).toBoolean() &&
+      witnessRoot.equals(map.getRoot()).toBoolean()
     );
   });
 });

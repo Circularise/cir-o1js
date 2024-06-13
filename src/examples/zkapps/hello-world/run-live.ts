@@ -6,7 +6,7 @@ import {
   Mina,
   PrivateKey,
   fetchAccount,
-} from 'o1js';
+} from '@circularise/cir-o1js';
 import { HelloWorld, adminPrivateKey } from './hello-world.js';
 
 const useCustomLocalNetwork = process.env.USE_CUSTOM_LOCAL_NETWORK === 'true';
@@ -35,8 +35,7 @@ if (!useCustomLocalNetwork) {
 console.log(`Fetching the fee payer account information.`);
 const accountDetails = (await fetchAccount({ publicKey: sender })).account;
 console.log(
-  `Using the fee payer account ${sender.toBase58()} with nonce: ${
-    accountDetails?.nonce
+  `Using the fee payer account ${sender.toBase58()} with nonce: ${accountDetails?.nonce
   } and balance: ${accountDetails?.balance}.`
 );
 console.log('');

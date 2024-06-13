@@ -8,7 +8,7 @@ import { Poseidon as PoseidonBigint } from '../bindings/crypto/poseidon.js';
 import { assert } from './errors.js';
 import { rangeCheckN } from './gadgets/range-check.js';
 import { TupleN } from './util/types.js';
-import { NoblePoseidonMina } from '@noble/curves/mina';
+import { NoblePoseidonMina } from '@circularise/cir-noble-curves/mina';
 import { bigintArrayToFieldArray, fieldArrayToBigIntArray } from './noble.js';
 
 // external API

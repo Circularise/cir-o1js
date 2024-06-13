@@ -25,11 +25,11 @@ import {
   MerkleTree,
   MerkleWitness,
   Struct,
-} from 'o1js';
+} from '@circularise/cir-o1js';
 
 const doProofs = true;
 
-class MyMerkleWitness extends MerkleWitness(8) {}
+class MyMerkleWitness extends MerkleWitness(8) { }
 
 class Account extends Struct({
   publicKey: PublicKey,

@@ -12,7 +12,7 @@ import {
   SelfProof,
   verify,
   Empty,
-} from 'o1js';
+} from '@circularise/cir-o1js';
 
 await isReady;
 
@@ -21,7 +21,7 @@ class TrivialZkapp extends SmartContract {
     hasToBe1.assertEquals(1);
   }
 }
-class TrivialProof extends TrivialZkapp.Proof() {}
+class TrivialProof extends TrivialZkapp.Proof() { }
 
 class NotSoSimpleZkapp extends SmartContract {
   @state(Field) x = State<Field>();

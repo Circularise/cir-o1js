@@ -1,5 +1,5 @@
 import { expect } from 'expect';
-import { Lightnet, Mina, PrivateKey, UInt64, fetchAccount } from 'o1js';
+import { Lightnet, Mina, PrivateKey, UInt64, fetchAccount } from '@circularise/cir-o1js';
 
 const useCustomLocalNetwork = process.env.USE_CUSTOM_LOCAL_NETWORK === 'true';
 Mina.setActiveInstance(configureMinaNetwork());
@@ -64,8 +64,7 @@ async function configureFeePayer() {
   console.log(`\nFetching the fee payer account information.`);
   const accountDetails = (await fetchAccount({ publicKey: sender })).account;
   console.log(
-    `Using the fee payer account ${sender.toBase58()} with nonce: ${
-      accountDetails?.nonce
+    `Using the fee payer account ${sender.toBase58()} with nonce: ${accountDetails?.nonce
     } and balance: ${accountDetails?.balance}.`
   );
   return { sender, senderKey };

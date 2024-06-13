@@ -1,6 +1,6 @@
 // Merkle Tree and off chain storage
 
-import { Field, MerkleTree } from 'o1js';
+import { Field, MerkleTree } from '@circularise/cir-o1js';
 
 export { OffchainStorage };
 

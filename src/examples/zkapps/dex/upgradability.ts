@@ -6,7 +6,7 @@ import {
   PrivateKey,
   UInt64,
   TransactionVersion,
-} from 'o1js';
+} from '@circularise/cir-o1js';
 import { getProfiler } from '../../utils/profiler.js';
 import { TokenContract, addresses, createDex, keys, tokenIds } from './dex.js';
 

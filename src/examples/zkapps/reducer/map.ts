@@ -12,7 +12,7 @@ import {
   Bool,
   Poseidon,
   Provable,
-} from 'o1js';
+} from '@circularise/cir-o1js';
 
 /*
 
@@ -38,7 +38,7 @@ zkApp.get(key); // ... get a value by key
 class Option extends Struct({
   isSome: Bool,
   value: Field,
-}) {}
+}) { }
 
 const KeyValuePair = provable({
   key: Field,

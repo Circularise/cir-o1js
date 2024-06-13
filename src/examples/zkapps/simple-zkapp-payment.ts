@@ -8,7 +8,7 @@ import {
   UInt64,
   shutdown,
   Permissions,
-} from 'o1js';
+} from '@circularise/cir-o1js';
 
 await isReady;
 

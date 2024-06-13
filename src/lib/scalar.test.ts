@@ -1,4 +1,4 @@
-import { shutdown, isReady, Field, Bool, Provable, Scalar } from 'o1js';
+import { shutdown, isReady, Field, Bool, Provable, Scalar } from '@circularise/cir-o1js';
 
 describe('scalar', () => {
   beforeAll(async () => {

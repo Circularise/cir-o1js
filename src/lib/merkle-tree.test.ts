@@ -5,7 +5,7 @@ import {
   Field,
   MerkleTree,
   MerkleWitness,
-} from 'o1js';
+} from '@circularise/cir-o1js';
 
 describe('Merkle Tree', () => {
   beforeAll(async () => {
@@ -64,7 +64,7 @@ describe('Merkle Tree', () => {
     // tree with height 3 (4 leaves)
     const HEIGHT = 3;
     let tree = new MerkleTree(HEIGHT);
-    class MyMerkleWitness extends MerkleWitness(HEIGHT) {}
+    class MyMerkleWitness extends MerkleWitness(HEIGHT) { }
 
     // tree with the leaves [15, 16, 17, 18]
     tree.fill([15, 16, 17, 18].map(Field));

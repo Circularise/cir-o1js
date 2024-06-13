@@ -1,8 +1,8 @@
-import { Crypto, Provable, createForeignField } from 'o1js';
+import { Crypto, Provable, createForeignField } from '@circularise/cir-o1js';
 
 class ForeignScalar extends createForeignField(
   Crypto.CurveParams.Secp256k1.modulus
-) {}
+) { }
 
 function main() {
   let s = Provable.witness(
