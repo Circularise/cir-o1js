@@ -21,7 +21,7 @@ await isReady;
 class MaybeIncrement extends Struct({
   isIncrement: Bool,
   otherData: Field,
-}) { }
+}) {}
 const INCREMENT = { isIncrement: Bool(true), otherData: Field(0) };
 
 class CounterZkapp extends SmartContract {

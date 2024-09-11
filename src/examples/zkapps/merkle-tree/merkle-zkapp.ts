@@ -29,7 +29,7 @@ import {
 
 const doProofs = true;
 
-class MyMerkleWitness extends MerkleWitness(8) { }
+class MyMerkleWitness extends MerkleWitness(8) {}
 
 class Account extends Struct({
   publicKey: PublicKey,

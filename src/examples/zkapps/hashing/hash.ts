@@ -10,7 +10,7 @@ import {
 } from '@circularise/cir-o1js';
 
 let initialCommitment = Field(0);
-class Bytes32 extends Bytes(32) { }
+class Bytes32 extends Bytes(32) {}
 
 export class HashStorage extends SmartContract {
   @state(Field) commitment = State<Field>();

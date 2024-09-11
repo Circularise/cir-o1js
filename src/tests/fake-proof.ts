@@ -25,11 +25,11 @@ const RealProgram = ZkProgram({
 const FakeProgram = ZkProgram({
   name: 'fake',
   methods: {
-    make: { privateInputs: [UInt64], method(_: UInt64) { } },
+    make: { privateInputs: [UInt64], method(_: UInt64) {} },
   },
 });
 
-class RealProof extends ZkProgram.Proof(RealProgram) { }
+class RealProof extends ZkProgram.Proof(RealProgram) {}
 
 const RecursiveProgram = ZkProgram({
   name: 'broken',

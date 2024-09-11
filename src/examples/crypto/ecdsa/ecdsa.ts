@@ -9,10 +9,10 @@ import {
 
 export { keccakAndEcdsa, ecdsa, Secp256k1, Ecdsa, Bytes32 };
 
-class Secp256k1 extends createForeignCurve(Crypto.CurveParams.Secp256k1) { }
-class Scalar extends Secp256k1.Scalar { }
-class Ecdsa extends createEcdsa(Secp256k1) { }
-class Bytes32 extends Bytes(32) { }
+class Secp256k1 extends createForeignCurve(Crypto.CurveParams.Secp256k1) {}
+class Scalar extends Secp256k1.Scalar {}
+class Ecdsa extends createEcdsa(Secp256k1) {}
+class Bytes32 extends Bytes(32) {}
 
 const keccakAndEcdsa = ZkProgram({
   name: 'ecdsa',

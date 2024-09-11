@@ -226,7 +226,8 @@ let results = getResults(contracts.voting, storage.votesStore);
 
 if (results[members[1].toBase58()] !== 1) {
   throw Error(
-    `Candidate ${members[1].toBase58()} should have one vote, but has ${results[members[1].toBase58()]
+    `Candidate ${members[1].toBase58()} should have one vote, but has ${
+      results[members[1].toBase58()]
     } `
   );
 }

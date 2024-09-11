@@ -289,10 +289,11 @@ function logPendingTransaction(pendingTx: Mina.PendingTransaction) {
   if (!pendingTx.isSuccess) throw Error('transaction failed');
   console.log(
     'tx sent: ' +
-    (useCustomLocalNetwork
-      ? `file://${os.homedir()}/.cache/zkapp-cli/lightnet/explorer/<version>/index.html?target=transaction&hash=${pendingTx.hash
-      }`
-      : `https://minascan.io/berkeley/tx/${pendingTx.hash}?type=zk-tx`)
+      (useCustomLocalNetwork
+        ? `file://${os.homedir()}/.cache/zkapp-cli/lightnet/explorer/<version>/index.html?target=transaction&hash=${
+            pendingTx.hash
+          }`
+        : `https://minascan.io/berkeley/tx/${pendingTx.hash}?type=zk-tx`)
   );
 }
 
@@ -318,25 +319,25 @@ async function getTokenBalances() {
   try {
     balances.user.MINA =
       Mina.getBalance(addresses[user]).toBigInt() / 1_000_000_000n;
-  } catch { }
+  } catch {}
   for (let token of ['X', 'Y', 'lqXY'] as const) {
     try {
       balances[user][token] = Mina.getBalance(
         addresses[user],
         tokenIds[token]
       ).toBigInt();
-    } catch { }
+    } catch {}
   }
   try {
     balances.dex.X = Mina.getBalance(addresses.dex, tokenIds.X).toBigInt();
-  } catch { }
+  } catch {}
   try {
     balances.dex.Y = Mina.getBalance(addresses.dex, tokenIds.Y).toBigInt();
-  } catch { }
+  } catch {}
   try {
     let dex = new Dex(addresses.dex);
     balances.dex.lqXYSupply = dex.totalSupply.get().toBigInt();
-  } catch { }
+  } catch {}
   return balances;
 }
 

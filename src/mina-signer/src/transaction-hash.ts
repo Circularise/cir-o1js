@@ -82,7 +82,10 @@ function userCommandToEnum({ common, body }: UserCommand): UserCommandEnum {
   let { tag: type, ...value } = body;
   switch (type) {
     case 'Payment':
-      return { common, body: { type, value: { receiver: body.receiver, amount: body.amount } } };
+      return {
+        common,
+        body: { type, value: { receiver: body.receiver, amount: body.amount } },
+      };
     case 'StakeDelegation':
       let { receiver: newDelegate } = value;
       return {
@@ -120,10 +123,9 @@ const Payment = record<Payment>(
   },
   ['receiver', 'amount']
 );
-const Delegation = record<Delegation>(
-  { newDelegate: BinablePublicKey },
-  ['newDelegate']
-);
+const Delegation = record<Delegation>({ newDelegate: BinablePublicKey }, [
+  'newDelegate',
+]);
 type DelegationEnum = { type: 'SetDelegate'; value: Delegation };
 const DelegationEnum = enumWithArgument<[DelegationEnum]>([
   { type: 'SetDelegate', value: Delegation },
@@ -254,7 +256,7 @@ const CommonV1 = with1(
     )
   )
 );
-type PaymentV1 = Payment & { source: PublicKey, tokenId: UInt64 };
+type PaymentV1 = Payment & { source: PublicKey; tokenId: UInt64 };
 const PaymentV1 = with1(
   with1(
     record<PaymentV1>(

@@ -1,14 +1,14 @@
 import {
-   Field,
-   Bool,
-   Group,
-   Scalar,
-   PrivateKey,
-   PublicKey,
-   Signature,
-   Int64,
-   Provable,
-   Struct,
+  Field,
+  Bool,
+  Group,
+  Scalar,
+  PrivateKey,
+  PublicKey,
+  Signature,
+  Int64,
+  Provable,
+  Struct,
 } from '@circularise/cir-o1js';
 
 /* This file demonstrates the classes and functions available in o1js */
@@ -100,24 +100,24 @@ console.assert(v.equals(z).toBoolean());
 
 /* As mentioned, we can also use `Provable.if` with compound types. */
 let CompoundType = Struct({
-   foo: [Field, Field],
-   bar: { x: Field, b: Bool },
+  foo: [Field, Field],
+  bar: { x: Field, b: Bool },
 });
 
 const c = Provable.if(
-   b1,
-   CompoundType,
-   { foo: [x0, z], bar: { x: x1, b: b1 } },
-   { foo: [z, x0], bar: { x: z, b: b0 } }
+  b1,
+  CompoundType,
+  { foo: [x0, z], bar: { x: x1, b: b1 } },
+  { foo: [z, x0], bar: { x: z, b: b0 } }
 );
 
 console.assert(c.bar.x.equals(x1).toBoolean());
 
 // Provable.switch is a generalization of Provable.if, for when you need to distinguish between multiple cases.
 let x = Provable.switch([Bool(false), Bool(true), Bool(false)], Int64, [
-   Int64.from(1),
-   Int64.from(2),
-   Int64.from(3),
+  Int64.from(1),
+  Int64.from(2),
+  Int64.from(3),
 ]);
 x.assertEquals(Int64.from(2));
 

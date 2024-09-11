@@ -21,7 +21,7 @@ class TrivialZkapp extends SmartContract {
     hasToBe1.assertEquals(1);
   }
 }
-class TrivialProof extends TrivialZkapp.Proof() { }
+class TrivialProof extends TrivialZkapp.Proof() {}
 
 class NotSoSimpleZkapp extends SmartContract {
   @state(Field) x = State<Field>();

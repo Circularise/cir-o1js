@@ -68,7 +68,12 @@ const Poseidon = {
     //   MlFieldArray.to(input)
     // );
     // return MlFieldArray.from(newState) as [Field, Field, Field];
-    return bigintArrayToFieldArray(NoblePoseidonMina.update(fieldArrayToBigIntArray(state), fieldArrayToBigIntArray(input))) as [Field, Field, Field];
+    return bigintArrayToFieldArray(
+      NoblePoseidonMina.update(
+        fieldArrayToBigIntArray(state),
+        fieldArrayToBigIntArray(input)
+      )
+    ) as [Field, Field, Field];
   },
 
   hashWithPrefix(prefix: string, input: Field[]) {

@@ -35,7 +35,8 @@ if (!useCustomLocalNetwork) {
 console.log(`Fetching the fee payer account information.`);
 const accountDetails = (await fetchAccount({ publicKey: sender })).account;
 console.log(
-  `Using the fee payer account ${sender.toBase58()} with nonce: ${accountDetails?.nonce
+  `Using the fee payer account ${sender.toBase58()} with nonce: ${
+    accountDetails?.nonce
   } and balance: ${accountDetails?.balance}.`
 );
 console.log('');

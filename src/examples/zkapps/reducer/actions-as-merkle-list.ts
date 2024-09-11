@@ -30,7 +30,7 @@ const emptyHash = Actions.empty().hash;
 const nextHash = (hash: Field, action: Action) =>
   Actions.pushEvent({ hash, data: [] }, action.toFields()).hash;
 
-class MerkleActions extends MerkleList.create(Action, nextHash, emptyHash) { }
+class MerkleActions extends MerkleList.create(Action, nextHash, emptyHash) {}
 
 // the "action state" / actions from many account updates is a Merkle list
 // of the above Merkle list, with another custom hash
@@ -42,7 +42,7 @@ class MerkleActionss extends MerkleList.create(
   MerkleActions.provable,
   nextActionsHash,
   emptyActionsHash
-) { }
+) {}
 
 // constants for our static-sized provable code
 const MAX_UPDATES_WITH_ACTIONS = 100;

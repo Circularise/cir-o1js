@@ -38,8 +38,8 @@ describe('Merkle Map', () => {
 
     expect(
       emptyLeafWitnessRoot.equals(emptyMap.getRoot()).toBoolean() &&
-      witnessKey.equals(key).toBoolean() &&
-      witnessRoot.equals(map.getRoot()).toBoolean()
+        witnessKey.equals(key).toBoolean() &&
+        witnessRoot.equals(map.getRoot()).toBoolean()
     );
   });
 });

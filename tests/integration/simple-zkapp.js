@@ -109,7 +109,8 @@ if (!isLocal) {
   });
   if (res.error) {
     throw Error(
-      `The fee payer account needs to be funded in order for the script to succeed! Please provide the private key of an already funded account. ${feePayerAddress.toBase58()}, ${feePayerKeyBase58}\n\n${res.error.message
+      `The fee payer account needs to be funded in order for the script to succeed! Please provide the private key of an already funded account. ${feePayerAddress.toBase58()}, ${feePayerKeyBase58}\n\n${
+        res.error.message
       }`
     );
   }
