@@ -1,7 +1,7 @@
 {
   "name": "@circularise/cir-o1js",
   "description": "TypeScript framework for zk-SNARKs and zkApps",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "license": "Apache-2.0",
   "homepage": "https://github.com/Circularise/cir-o1js",
   "repository": {
@@ -100,7 +100,7 @@
     "typescript": "5.1"
   },
   "dependencies": {
-    "@circularise/cir-noble-curves": "^1.0.0",
+    "@circularise/cir-noble-curves": "^1.0.1",
     "blakejs": "1.2.1",
     "cachedir": "^2.4.0",
     "isomorphic-fetch": "^3.0.0",
