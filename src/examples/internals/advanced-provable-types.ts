@@ -9,7 +9,7 @@ import {
   Provable,
   Empty,
   ProvableExtended,
-} from 'o1js';
+} from '@circularise/cir-o1js';
 import { expect } from 'expect';
 
 /**

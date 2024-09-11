@@ -1,4 +1,12 @@
-import { Field, Group, Gadgets, Provable, Scalar, Hash, Bytes } from 'o1js';
+import {
+  Field,
+  Group,
+  Gadgets,
+  Provable,
+  Scalar,
+  Hash,
+  Bytes,
+} from '@circularise/cir-o1js';
 
 export { GroupCS, BitwiseCS, HashCS };
 

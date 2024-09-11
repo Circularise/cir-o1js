@@ -25,7 +25,7 @@ import {
   MerkleTree,
   MerkleWitness,
   Struct,
-} from 'o1js';
+} from '@circularise/cir-o1js';
 
 const doProofs = true;
 

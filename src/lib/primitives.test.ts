@@ -1,4 +1,10 @@
-import { isReady, shutdown, Field, Bool, Provable } from 'o1js';
+import {
+  isReady,
+  shutdown,
+  Field,
+  Bool,
+  Provable,
+} from '@circularise/cir-o1js';
 describe('bool', () => {
   beforeAll(async () => {
     await isReady;

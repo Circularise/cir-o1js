@@ -6,7 +6,7 @@ import {
   Field,
   PrivateKey,
   PublicKey,
-} from 'o1js';
+} from '@circularise/cir-o1js';
 
 describe('circuit', () => {
   it('Provable.if out of snark', () => {

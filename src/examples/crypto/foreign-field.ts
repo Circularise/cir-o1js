@@ -15,7 +15,7 @@ import {
   Provable,
   state,
   State,
-} from 'o1js';
+} from '@circularise/cir-o1js';
 
 // Let's create a small finite field: F_17
 

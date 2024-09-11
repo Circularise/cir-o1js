@@ -1,4 +1,4 @@
-import { Field, isReady, shutdown, Encoding } from 'o1js';
+import { Field, isReady, shutdown, Encoding } from '@circularise/cir-o1js';
 
 await isReady;
 let n = 1000;

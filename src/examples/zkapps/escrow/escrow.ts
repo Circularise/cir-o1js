@@ -4,7 +4,7 @@ import {
   UInt64,
   AccountUpdate,
   PublicKey,
-} from 'o1js';
+} from '@circularise/cir-o1js';
 
 export class Escrow extends SmartContract {
   @method deposit(user: PublicKey) {

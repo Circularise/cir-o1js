@@ -7,7 +7,7 @@ import {
   Field,
   Bool,
   Sign,
-} from 'o1js';
+} from '@circularise/cir-o1js';
 
 describe('int', () => {
   const NUMBERMAX = 2 ** 53 - 1; //  JavaScript numbers can only safely store integers in the range -(2^53 − 1) to 2^53 − 1

@@ -5,7 +5,7 @@ import {
   Field,
   MerkleTree,
   MerkleWitness,
-} from 'o1js';
+} from '@circularise/cir-o1js';
 
 describe('Merkle Tree', () => {
   beforeAll(async () => {

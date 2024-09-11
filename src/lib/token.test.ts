@@ -14,7 +14,7 @@ import {
   Field,
   Int64,
   TokenId,
-} from 'o1js';
+} from '@circularise/cir-o1js';
 
 const tokenSymbol = 'TOKEN';
 

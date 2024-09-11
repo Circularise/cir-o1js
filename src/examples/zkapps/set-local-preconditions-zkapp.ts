@@ -17,7 +17,7 @@ import {
   Permissions,
   DeployArgs,
   UInt32,
-} from 'o1js';
+} from '@circularise/cir-o1js';
 
 const doProofs = false;
 

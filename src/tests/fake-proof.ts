@@ -6,7 +6,7 @@ import {
   method,
   ZkProgram,
   verify,
-} from 'o1js';
+} from '@circularise/cir-o1js';
 import assert from 'assert';
 
 const RealProgram = ZkProgram({

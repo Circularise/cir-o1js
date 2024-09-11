@@ -1,4 +1,4 @@
-import { CircuitValue, prop, UInt64 } from 'o1js';
+import { CircuitValue, prop, UInt64 } from '@circularise/cir-o1js';
 
 export default class ParticipantPreconditions extends CircuitValue {
   @prop minMinaVote: UInt64;

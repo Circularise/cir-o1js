@@ -1,4 +1,10 @@
-import { Poseidon, Field, Circuit, circuitMain, public_ } from 'o1js';
+import {
+  Poseidon,
+  Field,
+  Circuit,
+  circuitMain,
+  public_,
+} from '@circularise/cir-o1js';
 
 /**
  * Public input: a hash value h

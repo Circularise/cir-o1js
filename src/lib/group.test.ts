@@ -1,4 +1,4 @@
-import { Bool, Group, Scalar, Provable } from 'o1js';
+import { Bool, Group, Scalar, Provable } from '@circularise/cir-o1js';
 
 describe('group', () => {
   let g = Group({

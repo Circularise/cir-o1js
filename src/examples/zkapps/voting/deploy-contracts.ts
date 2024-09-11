@@ -7,7 +7,7 @@ import {
   PrivateKey,
   SmartContract,
   Reducer,
-} from 'o1js';
+} from '@circularise/cir-o1js';
 import { VotingAppParams } from './factory.js';
 
 import { Membership_ } from './membership.js';

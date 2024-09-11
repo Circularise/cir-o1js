@@ -22,7 +22,7 @@ import {
   UInt64,
   method,
   state,
-} from 'o1js';
+} from '@circularise/cir-o1js';
 
 import { randomAccounts } from './dex.js';
 import { TrivialCoin } from './erc20.js';

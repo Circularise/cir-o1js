@@ -6,7 +6,7 @@ import {
   UInt64,
   UInt32,
   Permissions,
-} from 'o1js';
+} from '@circularise/cir-o1js';
 import { deployContracts, deployInvalidContracts } from './deploy-contracts.js';
 import { DummyContract } from './dummy-contract.js';
 import { VotingAppParams } from './factory.js';

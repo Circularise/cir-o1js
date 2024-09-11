@@ -12,7 +12,7 @@ import {
   UInt32,
   PublicKey,
   Struct,
-} from 'o1js';
+} from '@circularise/cir-o1js';
 
 const doProofs = false;
 

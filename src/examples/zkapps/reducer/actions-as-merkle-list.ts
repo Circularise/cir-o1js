@@ -17,7 +17,7 @@ import {
   SmartContract,
   method,
   assert,
-} from 'o1js';
+} from '@circularise/cir-o1js';
 
 const { Actions } = AccountUpdate;
 

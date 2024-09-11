@@ -1,5 +1,11 @@
 import { expect } from 'expect';
-import { Lightnet, Mina, PrivateKey, UInt64, fetchAccount } from 'o1js';
+import {
+  Lightnet,
+  Mina,
+  PrivateKey,
+  UInt64,
+  fetchAccount,
+} from '@circularise/cir-o1js';
 
 const useCustomLocalNetwork = process.env.USE_CUSTOM_LOCAL_NETWORK === 'true';
 Mina.setActiveInstance(configureMinaNetwork());

@@ -9,7 +9,7 @@ import {
   Int64,
   Provable,
   Struct,
-} from 'o1js';
+} from '@circularise/cir-o1js';
 
 /* This file demonstrates the classes and functions available in o1js */
 

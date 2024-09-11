@@ -9,7 +9,7 @@ import {
   Poseidon,
   Struct,
   Provable,
-} from 'o1js';
+} from '@circularise/cir-o1js';
 
 export { Sudoku, SudokuZkApp };
 

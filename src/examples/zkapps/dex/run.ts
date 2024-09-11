@@ -1,5 +1,11 @@
 import { expect } from 'expect';
-import { AccountUpdate, Mina, Permissions, TokenId, UInt64 } from 'o1js';
+import {
+  AccountUpdate,
+  Mina,
+  Permissions,
+  TokenId,
+  UInt64,
+} from '@circularise/cir-o1js';
 import { getProfiler } from '../../utils/profiler.js';
 import { TokenContract, addresses, createDex, keys, tokenIds } from './dex.js';
 

@@ -11,7 +11,7 @@ import {
   PublicKey,
   Bool,
   Field,
-} from 'o1js';
+} from '@circularise/cir-o1js';
 
 class MyContract extends SmartContract {
   @method shouldMakeCompileThrow() {

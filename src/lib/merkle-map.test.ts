@@ -1,4 +1,4 @@
-import { isReady, shutdown, Field, MerkleMap } from 'o1js';
+import { isReady, shutdown, Field, MerkleMap } from '@circularise/cir-o1js';
 
 describe('Merkle Map', () => {
   beforeAll(async () => {

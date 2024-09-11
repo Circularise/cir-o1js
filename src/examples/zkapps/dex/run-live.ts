@@ -6,7 +6,7 @@ import {
   PrivateKey,
   UInt64,
   fetchAccount,
-} from 'o1js';
+} from '@circularise/cir-o1js';
 import os from 'os';
 import { tic, toc } from '../../utils/tic-toc.node.js';
 import {

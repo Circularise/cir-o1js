@@ -14,7 +14,7 @@ import {
   Provable,
   TransactionVersion,
   UInt32,
-} from 'o1js';
+} from '@circularise/cir-o1js';
 
 class Foo extends SmartContract {
   init() {

@@ -10,6 +10,10 @@ export {
 export { createForeignCurve, ForeignCurve } from './lib/foreign-curve.js';
 export { createEcdsa, EcdsaSignature } from './lib/foreign-ecdsa.js';
 export { Poseidon, TokenSymbol, ProvableHashable } from './lib/hash.js';
+export {
+  fieldArrayToBigIntArray,
+  bigintArrayToFieldArray,
+} from './lib/noble.js';
 export { Keccak } from './lib/keccak.js';
 export { Hash } from './lib/hashes-combined.js';
 
@@ -122,6 +126,8 @@ export { setNumberOfWorkers } from './lib/proof-system/workers.js';
 // experimental APIs
 import { memoizeWitness } from './lib/provable.js';
 export { Experimental };
+
+export { commit, verifyCommitment } from './lib/pedersen.js';
 
 const Experimental_ = {
   memoizeWitness,

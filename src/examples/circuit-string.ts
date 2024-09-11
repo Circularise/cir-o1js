@@ -5,7 +5,7 @@ import {
   method,
   Mina,
   PrivateKey,
-} from 'o1js';
+} from '@circularise/cir-o1js';
 import * as assert from 'assert/strict';
 
 // circuit which tests a couple of string features

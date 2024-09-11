@@ -1,4 +1,4 @@
-import { Bytes, Gadgets, ZkProgram } from 'o1js';
+import { Bytes, Gadgets, ZkProgram } from '@circularise/cir-o1js';
 
 export { SHA256Program, Bytes12 };
 

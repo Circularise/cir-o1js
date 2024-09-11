@@ -16,7 +16,7 @@ import {
   state,
   TokenContract as BaseTokenContract,
   AccountUpdateForest,
-} from 'o1js';
+} from '@circularise/cir-o1js';
 
 export { TokenContract, addresses, createDex, keys, randomAccounts, tokenIds };
 

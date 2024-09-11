@@ -5,7 +5,7 @@ import {
   createForeignCurve,
   Bool,
   Bytes,
-} from 'o1js';
+} from '@circularise/cir-o1js';
 
 export { keccakAndEcdsa, ecdsa, Secp256k1, Ecdsa, Bytes32 };
 

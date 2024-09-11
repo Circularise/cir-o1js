@@ -12,7 +12,7 @@ import {
   Struct,
   Reducer,
   Provable,
-} from 'o1js';
+} from '@circularise/cir-o1js';
 import assert from 'node:assert/strict';
 import { getProfiler } from '../../utils/profiler.js';
 

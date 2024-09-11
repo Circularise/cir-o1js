@@ -1,4 +1,4 @@
-import { Field, Poseidon, Provable } from 'o1js';
+import { Field, Poseidon, Provable } from '@circularise/cir-o1js';
 
 let hash = Poseidon.hash([Field(1), Field(-1)]);
 

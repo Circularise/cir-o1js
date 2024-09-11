@@ -13,7 +13,7 @@ import {
   AccountUpdate,
   Provable,
   TransactionVersion,
-} from 'o1js';
+} from '@circularise/cir-o1js';
 import { Member } from './member.js';
 import { ParticipantPreconditions } from './preconditions.js';
 

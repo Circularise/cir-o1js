@@ -20,7 +20,7 @@ import {
   shutdown,
   DeployArgs,
   fetchAccount,
-} from 'o1js';
+} from '@circularise/cir-o1js';
 
 await isReady;
 

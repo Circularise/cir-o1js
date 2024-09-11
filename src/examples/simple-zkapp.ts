@@ -10,7 +10,7 @@ import {
   AccountUpdate,
   Bool,
   PublicKey,
-} from 'o1js';
+} from '@circularise/cir-o1js';
 import { getProfiler } from './utils/profiler.js';
 
 const doProofs = true;

@@ -1,4 +1,4 @@
-import { Field, Provable, Gadgets, ZkProgram } from 'o1js';
+import { Field, Provable, Gadgets, ZkProgram } from '@circularise/cir-o1js';
 
 let cs = Provable.constraintSystem(() => {
   let f = Provable.witness(Field, () => Field(12));

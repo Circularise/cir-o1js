@@ -6,7 +6,7 @@ import {
   Mina,
   PrivateKey,
   fetchAccount,
-} from 'o1js';
+} from '@circularise/cir-o1js';
 import { HelloWorld, adminPrivateKey } from './hello-world.js';
 
 const useCustomLocalNetwork = process.env.USE_CUSTOM_LOCAL_NETWORK === 'true';

@@ -1,7 +1,13 @@
 /**
  * benchmark a circuit filled with generic gates
  */
-import { Circuit, Field, Provable, circuitMain, ZkProgram } from 'o1js';
+import {
+  Circuit,
+  Field,
+  Provable,
+  circuitMain,
+  ZkProgram,
+} from '@circularise/cir-o1js';
 import { tic, toc } from '../utils/tic-toc.node.js';
 
 // parameters
